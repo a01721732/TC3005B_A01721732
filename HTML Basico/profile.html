@@ -1,0 +1,41 @@
+<h1>Contact me</h1>
+<form id="contacto">
+    <label for="asunto">Asunto:</label><br>
+    <input type="text" id="asunto"><br>
+
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre"><br><br>
+
+    <label for="comentarios">Comentarios:</label><br>
+    <textarea type="textarea" id="comentarios" rows="10" columns="20"></textarea><br><br>
+
+    <label for="correo">Correo electrónico:</label><br>
+    <input type="text" id="email"><br>
+
+    <label for="telefono">Número de teléfono:</label><br>
+    <input type="text" id="telefono"><br><br>
+
+    <input type="submit" id="enviar" value="Enviar">
+</form>
+
+<script>
+    function onButtonClick(e) {
+    // used to prevent default behavior, it might be used or not
+    e.preventDefault();
+    const paragraph = document.createElement('p');
+    var valorNombre = document.getElementById("nombre").value;
+    var valorCorreo = document.getElementById("email").value;
+    paragraph.innerText = 'Gracias por sus comentarios '+valorNombre+', te contactaremos a '+valorCorreo+' en caso de ser necesario.';
+    
+    document.getElementById("asunto").value = "";
+    document.getElementById("nombre").value = "";
+    document.getElementById("comentarios").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("telefono").value = "";
+    
+    document.body.appendChild(paragraph);
+    }
+
+    const button = document.getElementById('contacto');
+    button.addEventListener('submit', onButtonClick);
+</script>
