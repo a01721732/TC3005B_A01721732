@@ -33,7 +33,7 @@
     document.getElementById("email").value = "";
     document.getElementById("telefono").value = "";
     
-    document.body.appendChild(paragraph);
+    document.getElementById("message").innerHTML = paragraph.outerHTML;
     }
 
     const button = document.getElementById('contacto');
