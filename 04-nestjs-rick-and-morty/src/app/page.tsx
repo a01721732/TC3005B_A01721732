@@ -19,10 +19,11 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex justify-center text-2xl text-slate-900 bg-white">
-        <div className="my-5">
+      <div className="flex justify-between text-2xl text-slate-900 bg-white">
+        <div className="my-5 ml-5">
           Página de Favoritos de Rick and Morty
         </div>
+        <a href="/favorites" className="pt-5 mr-5 text-cyan-500 hover:text-cyan-700">Favoritos</a>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 justify-center">
         {characters.map(character => (
