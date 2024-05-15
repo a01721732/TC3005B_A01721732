@@ -1,4 +1,4 @@
 export const paths = {
-    serverComponent: '/server-character',
-    clientComponent: '/client-character',
+  serverComponent: '/server-character',
+  clientComponent: '/client-character',
 }

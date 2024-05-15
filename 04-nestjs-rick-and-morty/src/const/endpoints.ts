@@ -1,3 +1,3 @@
 export const endpoints = {
-    getCharacter: '/api/character',
+  getCharacter: '/api/character',
 }

@@ -14,10 +14,10 @@ export async function getCharacter(id: number): Promise<Character> {
 }
 
 export async function getAllCharacters(): Promise<Character[]> {
-    const response = await fetch(
-        new URL(endpoints.getCharacter, clientConfig.apiHost)
-    )
-    const allCharacters: Info = await response.json()
-    const allCharactersResult = allCharacters.results
-    return allCharactersResult
+  const response = await fetch(
+    new URL(endpoints.getCharacter, clientConfig.apiHost),
+  )
+  const allCharacters: Info = await response.json()
+  const allCharactersResult = allCharacters.results
+  return allCharactersResult
 }

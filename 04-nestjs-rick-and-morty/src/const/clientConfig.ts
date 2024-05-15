@@ -1,7 +1,7 @@
 interface ClientConfig {
-    apiHost: string
+  apiHost: string
 }
-  
+
 export const clientConfig: ClientConfig = {
-    apiHost: process.env.NEXT_PUBLIC_API_HOST as string,
+  apiHost: process.env.NEXT_PUBLIC_API_HOST as string,
 }
