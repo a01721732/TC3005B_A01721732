@@ -1,0 +1,15 @@
+import { defineConfig } from "drizzle-kit";
+import { dbConfig } from "@/const/dbConfig";
+
+export default defineConfig({
+  schema: "./src/db/schema.ts",
+  out: "./drizzle",
+  dialect: "postgresql",
+  dbCredentials: {
+    host: dbConfig.host,
+    user: dbConfig.user,
+    password: dbConfig.password,
+    ssl: false,
+    database: dbConfig.database,
+  },
+});

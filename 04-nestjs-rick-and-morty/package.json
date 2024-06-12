@@ -11,12 +11,17 @@
     "lint:fix": "next lint --fix",
     "prepare": "cd .. && husky 04-nestjs-rick-and-morty/.husky || true",
     "test": "vitest",
-    "test:ci": "vitest run --coverage"
+    "test:ci": "vitest run --coverage",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
+    "drizzle-orm": "^0.31.0",
     "next": "14.2.3",
-    "react": "^18",
+    "pg": "^8.11.5",
+    "react": "^18.2.0",
     "react-dom": "^18",
+    "vercel": "^34.2.4",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -24,12 +29,14 @@
     "@testing-library/react": "^15.0.7",
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20",
+    "@types/pg": "^8.11.6",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@vitejs/plugin-react": "^4.2.1",
     "@vitest/coverage-v8": "^1.6.0",
     "@vitest/ui": "^1.6.0",
+    "drizzle-kit": "^0.22.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^9.1.0",
