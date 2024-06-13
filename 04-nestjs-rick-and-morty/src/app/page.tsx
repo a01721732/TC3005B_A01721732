@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div>
       <div className='flex justify-between bg-white text-2xl text-slate-900'>
-        <div className='my-5 ml-5'>Página de Favoritos de Rick and Morty</div>
+        <div className='my-5 ml-5'>Página de Favoritos de Rick and Morty!</div>
         <a
           href='/favorites'
           className='mr-5 pt-5 text-cyan-500 hover:text-cyan-700'
